@@ -13,7 +13,7 @@ for (const username of usernames) {
     test(`E2E Checkout Flow: ${username}`, async ({ page }) => {
         // 1. NAVIGATE & LOGIN
         await page.goto('https://www.saucedemo.com/');
-        await page.locator('[data-test="username"]').fill(username); // <-- Menggunakan username dari list
+        await page.locator('[data-test="username"]').fill(username);
         await page.locator('[data-test="password"]').fill('secret_sauce');
         await page.locator('[data-test="login-button"]').click();
 
